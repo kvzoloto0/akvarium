@@ -100,7 +100,7 @@ Coded by www.creative-tim.com
       </nav>
       <!-- End Navbar -->
       <div class="content">  
-        <div class="row">
+        <div class="row" id="mainDataWrapper">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
               <div class="card-body ">
@@ -128,40 +128,6 @@ Coded by www.creative-tim.com
               </div>
             </div>
           </div>
-            
-            
-<input type="checkbox" id="pseudoBtn">
-<div class="qqq">     
-            
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-12 col-md-12">
-                    <div class="numbers">
-                      <p class="card-title text-center">Block 2<p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                 <div class="row">
-                   <div class="col-7">
-                    <div class="stats">
-                      <i class="nc-icon nc-calendar-60"></i>
-                      18.09.2000
-                    </div>
-                   </div>
-                   <div class="col-5">
-                        <div>данные которые дополняет пользователь</div>
-                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-</div> 
-            
             
         </div>
 <!--
@@ -270,18 +236,18 @@ Coded by www.creative-tim.com
       <div class="modal-body">
           
         <div class="modalBlockName">
-            <input class="nameBlock" type="text" placeholder="Назовите блок?" 
+            <input class="nameBlock" type="text" placeholder="Назовите блок?" id="nameInput"
             oninput="this.value=this.value.replace(/[^а-яА-ЯіІ\s]/g,'');" maxlength="20"> 
         </div>
     
         <div class="modalBlockLiter">    
-            <input class="nameBlock" type="numder" placeholder="Сколько литров?" 
+            <input class="nameBlock" type="numder" placeholder="Сколько литров?"  id="amountInput"
             onkeypress="return (event.charCode >= 48 && event.charCode <= 57 && /^\d{0,3}$/.test(this.value));" maxlength="20">
         </div>
 
       </div>
       <div class="modal-footer">
-        <label for="pseudoBtn" type="button" class="btn btn-primary">Добавить блок</label>
+        <label for="pseudoBtn" type="button" id="addBlock" class="btn btn-primary">Добавить блок</label>
 <!--
               <input type="checkbox" id="pseudoBtn">
               <div class="qqq">Готовый текст</div>
@@ -316,6 +282,7 @@ Coded by www.creative-tim.com
       demo.initChartsPages();
     });
   </script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
